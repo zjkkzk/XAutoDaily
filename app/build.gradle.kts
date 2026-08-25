@@ -84,6 +84,11 @@ android {
         }
     }
 
+    // ✅ 新增：让 DEX 和 SO 文件不压缩（仅存储）
+    aaptOptions {
+        noCompress("dex", "so")
+    }
+
     signingConfigs {
         create("config") {
             if (performSigning) {
